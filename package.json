@@ -4,7 +4,7 @@
   "description": "notes for BloomTech Full-stack Sprint 15",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose",
     "start": "node index.js",
     "server": "nodemon index.js"
   },
@@ -20,7 +20,12 @@
     "sqlite3": "^5.1.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^29.4.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

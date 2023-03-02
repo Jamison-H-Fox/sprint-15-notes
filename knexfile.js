@@ -24,5 +24,10 @@ module.exports = {
       directory: './data/seeds'
     }
   },
-
+  testing: {
+    ...development,
+    connection: {
+      filename: './data/test.db3',
+    },
+  }
 };
